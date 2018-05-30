@@ -35,9 +35,6 @@ class ApiController(rest.RestController):
     def get_all(self):
         """Retrieve a list of availability zone."""
 
-        azs = pecan.request.engine_api.list_availability_zones(
-            pecan.request.context)
-
         collection = Apis()
         collection.apis = ['a', 'b', 'c']
         return collection
